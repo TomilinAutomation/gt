@@ -1,0 +1,14 @@
+image: maven4.0-openjdk-17
+default:
+  tags:
+    - shelllocal
+
+stages:
+  - test
+
+test:
+  stage: test
+  script:
+    - mvn test
+    - mvn allure:serve
+
